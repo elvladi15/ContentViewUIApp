@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:views="clr-namespace:ContentViewUIApp.Views.Components" 
+             x:Class="ContentViewUIApp.Views.DiscoveryPage">
+    <StackLayout>
+        <Frame BackgroundColor="#2196F3" Padding="20" Grid.ColumnSpan="2">
+            <Label Text="Discovery" HorizontalTextAlignment="Center" TextColor="White" FontSize="Large"/>
+        </Frame>
+        <ScrollView>
+            <Grid RowDefinitions="Auto,Auto,Auto" ColumnDefinitions="*,*" Padding="20,0,20,10" RowSpacing="20" ColumnSpacing="20">
+                <views:MenuView Grid.Row="1" Grid.Column="0" BindingContext="{Binding BarAndHotelsMenuOption}"/>
+                <views:MenuView Grid.Row="1" Grid.Column="1" BindingContext="{Binding FineDiningMenuOption}"/>
+                <views:MenuView Grid.Row="2" Grid.Column="0" BindingContext="{Binding CafesMenuOption}"/>
+                <views:MenuView Grid.Row="2" Grid.Column="1" BindingContext="{Binding NearbyMenuOption}"/>
+                <views:MenuView Grid.Row="3" Grid.Column="0" BindingContext="{Binding FastFoodsMenuOption}"/>
+                <views:MenuView Grid.Row="3" Grid.Column="1" BindingContext="{Binding FeaturedFoodsMenuOption}"/>
+            </Grid>
+        </ScrollView>
+    </StackLayout>
+</ContentPage>
